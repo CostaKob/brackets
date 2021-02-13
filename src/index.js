@@ -8,13 +8,9 @@ module.exports = function check(str, bracketsConfig) {
       // open
       if (letters[i] === bracketsConfig[j][0]) {
         if(stack.includes(letters[i]) && !(brackets.includes(letters[i]))) {
-          console.log("1pop")
-          console.log(stack)
           stack.pop()
         }
         else {
-          console.log("2push")
-          console.log(stack)
           stack.push(letters[i])
         }
       }
@@ -25,8 +21,6 @@ module.exports = function check(str, bracketsConfig) {
           return false
         }
         else {
-          console.log("3pop")
-          console.log(stack)
           stack.pop()
         }
       }
